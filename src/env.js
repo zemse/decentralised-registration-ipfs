@@ -12,5 +12,12 @@ module.exports = {
           return null;
       }
     })()
+  },
+  ipfs: {
+    infura: {
+      host: 'ipfs.infura.io',
+      port: 5001,
+      protocol: 'https'
+    }
   }
 };
