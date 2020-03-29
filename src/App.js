@@ -1,26 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
+import LoadWallet from './components/LoadWallet/LoadWallet';
+import Home from './components/Home/Home';
+
+export default class extends Component {
+  state = {
+    walletLoaded: false
+  };
+
+  componentDidMount = () => {
+    setInterval(() => {
+      const walletLoaded = window.wallet !== undefined;
+      if(walletLoaded !== this.state.walletLoaded) {
+        this.setState({ walletLoaded });
+      }
+    }, 100);
+  };
+
+  render = () => (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {
+          !this.state.walletLoaded
+          ? <LoadWallet />
+          : <Home />
+        }
       </header>
     </div>
   );
 }
-
-export default App;
