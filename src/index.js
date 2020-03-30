@@ -11,9 +11,9 @@ const ipfsUtils = require('./ipfs-utils');
 window.ethers = ethers;
 window.ipfsUtils = ipfsUtils;
 
-window.wallet = (new ethers.Wallet(
-  '24C4FE6063E62710EAD956611B71825B778B041B18ED53118CE5DA5F02E494BA'))
-  .connect(ethers.getDefaultProvider(network));
+// window.wallet = (new ethers.Wallet(
+//   '24C4FE6063E62710EAD956611B71825B778B041B18ED53118CE5DA5F02E494BA'))
+//   .connect(ethers.getDefaultProvider(network));
 
 window.addEventListener('message', function(e) {
   setTimeout(() => {
