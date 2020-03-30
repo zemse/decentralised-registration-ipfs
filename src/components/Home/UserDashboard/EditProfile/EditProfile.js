@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { IPFS_ADD_STATUS_ENUM, ETH_TX_CONFIRM_ENUM } from '../../../enums';
+import { IPFS_ADD_STATUS_ENUM, ETH_TX_CONFIRM_ENUM } from '../../../../enums';
 const ethers = require('ethers');
-const ipfsUtils = require('../../../ipfs-utils');
+const ipfsUtils = require('../../../../ipfs-utils');
 
 export default class extends Component {
   state = {
@@ -81,7 +81,7 @@ export default class extends Component {
             this.setState({ txStatus: ETH_TX_CONFIRM_ENUM.WAITING });
             await tx.wait();
             this.setState({ txStatus: ETH_TX_CONFIRM_ENUM.CONFIRMED });
-            // trigger update profile
+            this.props.updateProfileObj(this.state.ipfsHash);
           }}>{(() => {
             switch(this.state.txStatus) {
               case ETH_TX_CONFIRM_ENUM.IDLE:
