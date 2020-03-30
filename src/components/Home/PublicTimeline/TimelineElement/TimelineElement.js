@@ -9,6 +9,7 @@ export default class extends Component {
     multiHash: null,
     name: null,
     location: null,
+    url: null,
     bio: null
   };
 
@@ -28,6 +29,7 @@ export default class extends Component {
     this.setState({
       name: profileObj.name,
       location: profileObj.location,
+      url: profileObj.url,
       bio: profileObj.bio,
     });
   };
@@ -39,6 +41,7 @@ export default class extends Component {
         <span className="el-key">IPFS:</span> {this.state.multiHash}<br />
         <span className="el-key">Name:</span> {this.state.name}<br />
         <span className="el-key">Location:</span> {this.state.location}<br />
+        <span className="el-key">Url:</span> <a href={this.state.url} target="_blank">{this.state.url}</a><br />
         <span className="el-key">Bio:</span> {this.state.bio}
       </div>
     );

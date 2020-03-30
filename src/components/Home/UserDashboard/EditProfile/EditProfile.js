@@ -7,6 +7,7 @@ export default class extends Component {
   state = {
     name: '',
     location: '',
+    url: '',
     bio: '',
     ipfsHash: null,
     ipfsStatus: IPFS_ADD_STATUS_ENUM.IDLE,
@@ -19,6 +20,7 @@ export default class extends Component {
       this.setState({
         name: window.profileObj.name,
         location: window.profileObj.location,
+        url: window.profileObj.url,
         bio: window.profileObj.bio
       });
     }
@@ -38,6 +40,11 @@ export default class extends Component {
           value={this.state.location}
           onChange={event => this.setState({ location: event.target.value })}
           /><br />
+        Url: <input
+          placeholder="Enter your URL"
+          value={this.state.url}
+          onChange={event => this.setState({ url: event.target.value })}
+          /><br />
         Bio: <textarea
           placeholder="Tell me about yourself"
           value={this.state.bio}
@@ -50,6 +57,7 @@ export default class extends Component {
               version: 1,
               name: this.state.name,
               location: this.state.location,
+              url: this.state.url,
               bio: this.state.bio
             };
             const bytes = ethers.utils.toUtf8Bytes(JSON.stringify(data));

@@ -72,7 +72,15 @@ input, textarea {
 }
 
 textarea {
-
   height: 40vh;
+}
 
+a:visited {
+  color:#fffc;
+}
+a:link {
+  color:#fffc;
+}
+a:active {
+  color:#fffc;
 }
