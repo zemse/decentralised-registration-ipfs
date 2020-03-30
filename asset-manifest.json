@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.63f7d825.chunk.css",
-    "main.js": "/static/js/main.445b5d8b.chunk.js",
-    "main.js.map": "/static/js/main.445b5d8b.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.db3602cd.js",
-    "runtime-main.js.map": "/static/js/runtime-main.db3602cd.js.map",
-    "static/js/2.eb90fa85.chunk.js": "/static/js/2.eb90fa85.chunk.js",
-    "static/js/2.eb90fa85.chunk.js.map": "/static/js/2.eb90fa85.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.6868f23c2b554a2334417c53de28f6ea.js": "/precache-manifest.6868f23c2b554a2334417c53de28f6ea.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.63f7d825.chunk.css.map": "/static/css/main.63f7d825.chunk.css.map",
-    "static/js/2.eb90fa85.chunk.js.LICENSE.txt": "/static/js/2.eb90fa85.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
+    "main.css": "/decentralised-registration-ipfs/static/css/main.63f7d825.chunk.css",
+    "main.js": "/decentralised-registration-ipfs/static/js/main.326536f2.chunk.js",
+    "main.js.map": "/decentralised-registration-ipfs/static/js/main.326536f2.chunk.js.map",
+    "runtime-main.js": "/decentralised-registration-ipfs/static/js/runtime-main.4e12e180.js",
+    "runtime-main.js.map": "/decentralised-registration-ipfs/static/js/runtime-main.4e12e180.js.map",
+    "static/js/2.7bb7891a.chunk.js": "/decentralised-registration-ipfs/static/js/2.7bb7891a.chunk.js",
+    "static/js/2.7bb7891a.chunk.js.map": "/decentralised-registration-ipfs/static/js/2.7bb7891a.chunk.js.map",
+    "index.html": "/decentralised-registration-ipfs/index.html",
+    "precache-manifest.3c5f1c887e343882cf923d628be29723.js": "/decentralised-registration-ipfs/precache-manifest.3c5f1c887e343882cf923d628be29723.js",
+    "service-worker.js": "/decentralised-registration-ipfs/service-worker.js",
+    "static/css/main.63f7d825.chunk.css.map": "/decentralised-registration-ipfs/static/css/main.63f7d825.chunk.css.map",
+    "static/js/2.7bb7891a.chunk.js.LICENSE.txt": "/decentralised-registration-ipfs/static/js/2.7bb7891a.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/decentralised-registration-ipfs/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.db3602cd.js",
-    "static/js/2.eb90fa85.chunk.js",
+    "static/js/runtime-main.4e12e180.js",
+    "static/js/2.7bb7891a.chunk.js",
     "static/css/main.63f7d825.chunk.css",
-    "static/js/main.445b5d8b.chunk.js"
+    "static/js/main.326536f2.chunk.js"
   ]
 }
