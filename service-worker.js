@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/decentralised-registration-ipfs/precache-manifest.3c5f1c887e343882cf923d628be29723.js"
+  "/Users/sohamzemse/soham/workspace/blockchain/ethereum/d-reg/build/precache-manifest.1c32cee8e4a949d8b51e60dabae937e4.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -33,7 +33,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/decentralised-registration-ipfs/index.html"), {
+workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/Users/sohamzemse/soham/workspace/blockchain/ethereum/d-reg/build/index.html"), {
   
   blacklist: [/^\/_/,/\/[^/?]+\.[^/]+$/],
 });

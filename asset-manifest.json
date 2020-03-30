@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/decentralised-registration-ipfs/static/css/main.63f7d825.chunk.css",
-    "main.js": "/decentralised-registration-ipfs/static/js/main.326536f2.chunk.js",
-    "main.js.map": "/decentralised-registration-ipfs/static/js/main.326536f2.chunk.js.map",
-    "runtime-main.js": "/decentralised-registration-ipfs/static/js/runtime-main.4e12e180.js",
-    "runtime-main.js.map": "/decentralised-registration-ipfs/static/js/runtime-main.4e12e180.js.map",
-    "static/js/2.7bb7891a.chunk.js": "/decentralised-registration-ipfs/static/js/2.7bb7891a.chunk.js",
-    "static/js/2.7bb7891a.chunk.js.map": "/decentralised-registration-ipfs/static/js/2.7bb7891a.chunk.js.map",
-    "index.html": "/decentralised-registration-ipfs/index.html",
-    "precache-manifest.3c5f1c887e343882cf923d628be29723.js": "/decentralised-registration-ipfs/precache-manifest.3c5f1c887e343882cf923d628be29723.js",
-    "service-worker.js": "/decentralised-registration-ipfs/service-worker.js",
-    "static/css/main.63f7d825.chunk.css.map": "/decentralised-registration-ipfs/static/css/main.63f7d825.chunk.css.map",
-    "static/js/2.7bb7891a.chunk.js.LICENSE.txt": "/decentralised-registration-ipfs/static/js/2.7bb7891a.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/decentralised-registration-ipfs/static/media/logo.5d5d9eef.svg"
+    "main.css": "/Users/sohamzemse/soham/workspace/blockchain/ethereum/d-reg/build/static/css/main.63f7d825.chunk.css",
+    "main.js": "/Users/sohamzemse/soham/workspace/blockchain/ethereum/d-reg/build/static/js/main.ec501aa7.chunk.js",
+    "main.js.map": "/Users/sohamzemse/soham/workspace/blockchain/ethereum/d-reg/build/static/js/main.ec501aa7.chunk.js.map",
+    "runtime-main.js": "/Users/sohamzemse/soham/workspace/blockchain/ethereum/d-reg/build/static/js/runtime-main.6d4574a8.js",
+    "runtime-main.js.map": "/Users/sohamzemse/soham/workspace/blockchain/ethereum/d-reg/build/static/js/runtime-main.6d4574a8.js.map",
+    "static/js/2.2917c152.chunk.js": "/Users/sohamzemse/soham/workspace/blockchain/ethereum/d-reg/build/static/js/2.2917c152.chunk.js",
+    "static/js/2.2917c152.chunk.js.map": "/Users/sohamzemse/soham/workspace/blockchain/ethereum/d-reg/build/static/js/2.2917c152.chunk.js.map",
+    "index.html": "/Users/sohamzemse/soham/workspace/blockchain/ethereum/d-reg/build/index.html",
+    "precache-manifest.1c32cee8e4a949d8b51e60dabae937e4.js": "/Users/sohamzemse/soham/workspace/blockchain/ethereum/d-reg/build/precache-manifest.1c32cee8e4a949d8b51e60dabae937e4.js",
+    "service-worker.js": "/Users/sohamzemse/soham/workspace/blockchain/ethereum/d-reg/build/service-worker.js",
+    "static/css/main.63f7d825.chunk.css.map": "/Users/sohamzemse/soham/workspace/blockchain/ethereum/d-reg/build/static/css/main.63f7d825.chunk.css.map",
+    "static/js/2.2917c152.chunk.js.LICENSE.txt": "/Users/sohamzemse/soham/workspace/blockchain/ethereum/d-reg/build/static/js/2.2917c152.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/Users/sohamzemse/soham/workspace/blockchain/ethereum/d-reg/build/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4e12e180.js",
-    "static/js/2.7bb7891a.chunk.js",
+    "static/js/runtime-main.6d4574a8.js",
+    "static/js/2.2917c152.chunk.js",
     "static/css/main.63f7d825.chunk.css",
-    "static/js/main.326536f2.chunk.js"
+    "static/js/main.ec501aa7.chunk.js"
   ]
 }
