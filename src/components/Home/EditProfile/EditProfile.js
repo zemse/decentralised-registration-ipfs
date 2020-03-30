@@ -27,7 +27,7 @@ export default class extends Component {
   render = () => {
     return (
       <>
-        <p>Register form</p>
+        <p><span className="cursor-pointer" onClick={this.props.hideProfile}>[{'<< Go Back'}]</span> Register form</p>
         Name: <input
           placeholder="Enter your name"
           value={this.state.name}
@@ -73,7 +73,7 @@ export default class extends Component {
         })()}</button>
         {this.state.ipfsHash ? <>
           New IPFS Hash: {this.state.ipfsHash}
-          <button onClick={async() => {
+          <button disabled={this.state.txStatus !== ETH_TX_CONFIRM_ENUM.IDLE} onClick={async() => {
             this.setState({ txStatus: ETH_TX_CONFIRM_ENUM.SIGNING });
             const bytes32 = ipfsUtils.multihashToBytes32(this.state.ipfsHash);
             const tx = await window.dRegContract.functions.updateProfile(bytes32);
@@ -94,6 +94,8 @@ export default class extends Component {
                 return <>Profile Updated</>;
             }
           })()}</button>
+          <br />
+          {this.state.txStatus === ETH_TX_CONFIRM_ENUM.CONFIRMED ? <button onClick={this.props.hideProfile}>Back to Home</button> : null}
         </> : null}
       </>
     );
