@@ -11,7 +11,7 @@ export default class extends Component {
   state = {
     registrationStatus: REGISTRATION_STATUS_ENUM.CHECKING,
     ipfsGetStatus: IPFS_GET_STATUS_ENUM.IDLE,
-    profileObj: null,
+    // profileObj: null,
     showEditProfile: false,
     errorMessage: ''
   };
@@ -37,9 +37,11 @@ export default class extends Component {
         const profileObj = JSON.parse(ethers.utils.toUtf8String(bytes));
         console.log({profileObj});
 
+        window.profileObj = profileObj;
+
         this.setState({
           ipfsGetStatus: IPFS_GET_STATUS_ENUM.LOADED,
-          profileObj
+          // profileObj
         });
       } catch (error) {
         this.setState({
@@ -56,15 +58,16 @@ export default class extends Component {
         {
           !this.state.showEditProfile
           ? <>
-            <p>Welcome {this.state.profileObj && this.state.profileObj.name ? <>{this.state.profileObj.name}</> : <>{window.wallet.address}</>}!</p>
+            <p>Welcome {window.profileObj && window.profileObj.name ? <>{window.profileObj.name}</> : <>{window.wallet.address}</>}!</p>
             <p>{(() => {
               switch(this.state.registrationStatus) {
                 case REGISTRATION_STATUS_ENUM.CHECKING:
                   return <>Checking your registration status...</>;
                 case REGISTRATION_STATUS_ENUM.NOT_REGISTERED:
-                  return <>You have not registered. <span className="cursor-pointer" onClick={() => this.setState({
+                  return <>You have not registered.<br />
+                  <span className="cursor-pointer" onClick={() => this.setState({
                     showEditProfile: true
-                  })}>Register Now</span>.</>;
+                  })}>[Register Now]</span></>;
                 case REGISTRATION_STATUS_ENUM.REGISTERED:
                   return <>
                     You are registered<br />
@@ -73,7 +76,12 @@ export default class extends Component {
                         case IPFS_GET_STATUS_ENUM.LOADING:
                           return <>Fetching your profile details from IPFS...</>;
                         case IPFS_GET_STATUS_ENUM.LOADED:
-                          return <>Successfully, fetched your profile from IPFS.</>;
+                          return <>
+                            Successfully, fetched your profile from IPFS.<br />
+                            <span className="cursor-pointer" onClick={() => this.setState({
+                              showEditProfile: true
+                            })}>[Edit Profile]</span>
+                          </>;
                         case IPFS_GET_STATUS_ENUM.NOT_FOUND:
                           return <>Looks like your profile was dropped from IPFS, kindly re-update your profile.</>;
                       }
@@ -85,7 +93,8 @@ export default class extends Component {
             })()}</p>
           </>
           : <EditProfile
-          hideProfile={() => this.setState({ showEditProfile: false })} />
+              hideProfile={() => this.setState({ showEditProfile: false })}
+            />
         }
       </>
     );

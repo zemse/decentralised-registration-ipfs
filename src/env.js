@@ -7,7 +7,7 @@ module.exports = {
     address: (() => {
       switch(network) {
         case 'kovan':
-          return '0x51Cb838E106435067A04D60185Ba731B7cD1150e';
+          return '0x5149067BD6EDa621dF2201b6BDCC3494bAe349C9';
         default:
           return null;
       }

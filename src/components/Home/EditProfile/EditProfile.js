@@ -14,6 +14,16 @@ export default class extends Component {
     errorMessage: ''
   };
 
+  componentDidMount = () => {
+    if(window.profileObj) {
+      this.setState({
+        name: window.profileObj.name,
+        location: window.profileObj.location,
+        bio: window.profileObj.bio
+      });
+    }
+  };
+
   render = () => {
     return (
       <>
