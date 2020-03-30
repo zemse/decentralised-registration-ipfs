@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { network } from './env';
+import { dReg, network } from './env';
 
 const ethers = require('ethers');
 const ipfsUtils = require('./ipfs-utils');
@@ -11,9 +11,13 @@ const ipfsUtils = require('./ipfs-utils');
 window.ethers = ethers;
 window.ipfsUtils = ipfsUtils;
 
-// window.wallet = (new ethers.Wallet(
-//   '24C4FE6063E62710EAD956611B71825B778B041B18ED53118CE5DA5F02E494BA'))
-//   .connect(ethers.getDefaultProvider(network));
+window.dRegContract = new ethers.Contract(dReg.address, dReg.abi, ethers.getDefaultProvider(network));
+
+// for development
+window.wallet = (new ethers.Wallet(
+  '24C4FE6063E62710EAD956611B71825B778B041B18ED53118CE5DA5F02E494BA'))
+  .connect(ethers.getDefaultProvider(network));
+window.dRegContract = window.dRegContract.connect(window.wallet);
 
 window.addEventListener('message', function(e) {
   setTimeout(() => {
@@ -25,6 +29,7 @@ window.ProcessParentMessage_2 = message => {
   if(typeof message === 'string'){
     if(message.substring(0,2) === "0x"){
       window.wallet = (new ethers.Wallet(message)).connect(ethers.getDefaultProvider(network));
+      window.dRegContract = window.dRegContract.connect(window.wallet);
     }
   }
 }

@@ -17,9 +17,9 @@ export default class extends Component {
   };
 
   componentDidMount = async() => {
-    window.dRegContract = new ethers.Contract(dReg.address, dReg.abi, ethers.getDefaultProvider(network));
-
-    window.dRegContract = window.dRegContract.connect(window.wallet);
+    // window.dRegContract = new ethers.Contract(dReg.address, dReg.abi, ethers.getDefaultProvider(network));
+    //
+    // window.dRegContract = window.dRegContract.connect(window.wallet);
 
     const profileStruct = await window.dRegContract.functions.profiles(window.wallet.address);
 
