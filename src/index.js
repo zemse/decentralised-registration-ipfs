@@ -14,10 +14,10 @@ window.ipfsUtils = ipfsUtils;
 window.dRegContract = new ethers.Contract(dReg.address, dReg.abi, ethers.getDefaultProvider(network));
 
 // for development
-window.wallet = (new ethers.Wallet(
-  '24C4FE6063E62710EAD956611B71825B778B041B18ED53118CE5DA5F02E494BA'))
-  .connect(ethers.getDefaultProvider(network));
-window.dRegContract = window.dRegContract.connect(window.wallet);
+// window.wallet = (new ethers.Wallet(
+//   '24C4FE6063E62710EAD956611B71825B778B041B18ED53118CE5DA5F02E494BA'))
+//   .connect(ethers.getDefaultProvider(network));
+// window.dRegContract = window.dRegContract.connect(window.wallet);
 
 window.addEventListener('message', function(e) {
   setTimeout(() => {
