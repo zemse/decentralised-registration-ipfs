@@ -31,10 +31,10 @@ export default class extends Component {
           !this.state.showTimeLine
           ? <>
               <UserDashboard />
-              <span className="cursor-pointer" onClick={() => this.setState({ showTimeLine: true })}>[Show Public Timeline]</span>
+              <button onClick={() => this.setState({ showTimeLine: true })}>Show Public Timeline</button>
             </>
           : <>
-              <span className="cursor-pointer" onClick={() => this.setState({ showTimeLine: false })}>[Show My Dashboard]</span>
+              <button onClick={() => this.setState({ showTimeLine: false })}>Show My Dashboard</button>
               <PublicTimeline />
             </>
         }

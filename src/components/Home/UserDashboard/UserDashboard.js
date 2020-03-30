@@ -73,9 +73,9 @@ export default class extends Component {
                   return <>Checking your registration status...</>;
                 case REGISTRATION_STATUS_ENUM.NOT_REGISTERED:
                   return <>You have not registered.<br />
-                  <span className="cursor-pointer" onClick={() => this.setState({
+                  <button onClick={() => this.setState({
                     showEditProfile: true
-                  })}>[Register Now]</span></>;
+                  })}>Register Now</button></>;
                 case REGISTRATION_STATUS_ENUM.REGISTERED:
                   return <>
                     You are registered<br />
@@ -86,9 +86,9 @@ export default class extends Component {
                         case IPFS_GET_STATUS_ENUM.LOADED:
                           return <>
                             Successfully, fetched your profile from IPFS.<br />
-                            <span className="cursor-pointer" onClick={() => this.setState({
+                            <button onClick={() => this.setState({
                               showEditProfile: true
-                            })}>[Edit Profile]</span>
+                            })}>Edit Profile</button>
                           </>;
                         case IPFS_GET_STATUS_ENUM.NOT_FOUND:
                           return <>Looks like your profile was dropped from IPFS, kindly re-update your profile.</>;

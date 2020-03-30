@@ -27,7 +27,7 @@ export default class extends Component {
   render = () => {
     return (
       <>
-        <p><span className="cursor-pointer" onClick={this.props.hideProfile}>[{'<< Go Back'}]</span> Register form</p>
+        <p><button onClick={this.props.hideProfile}>{'<< Go Back'}</button> Register form</p>
         Name: <input
           placeholder="Enter your name"
           value={this.state.name}
