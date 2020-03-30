@@ -6,8 +6,8 @@ import UserDashboard from './UserDashboard/UserDashboard';
 import EditProfile from './UserDashboard/EditProfile/EditProfile';
 import PublicTimeline from './PublicTimeline/PublicTimeline';
 
+import ipfsUtils from '../../ipfs-utils';
 const ethers = require('ethers');
-const ipfsUtils = require('../../ipfs-utils');
 
 export default class extends Component {
   state = {

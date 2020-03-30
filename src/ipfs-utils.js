@@ -49,4 +49,5 @@ function toMultihash(bytes32) {
   return bs58.encode(ethers.utils.concat(['0x1220', hex]));
 }
 
-module.exports = { bs58, add, get, multihashToBytes32, toMultihash };
+const ipfsUtils = { bs58, add, get, multihashToBytes32, toMultihash };
+export default ipfsUtils;

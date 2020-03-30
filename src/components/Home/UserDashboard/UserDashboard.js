@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { dReg, network, ipfs } from '../../../env';
 import { REGISTRATION_STATUS_ENUM, IPFS_GET_STATUS_ENUM } from '../../../enums';
-
+import ipfsUtils from '../../../ipfs-utils';
 import EditProfile from './EditProfile/EditProfile';
 
 const ethers = require('ethers');
-const ipfsUtils = require('../../../ipfs-utils');
 
 export default class extends Component {
   state = {

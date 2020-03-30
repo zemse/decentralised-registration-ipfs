@@ -4,9 +4,9 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { dReg, network } from './env';
+import ipfsUtils from './ipfs-utils';
 
 const ethers = require('ethers');
-const ipfsUtils = require('./ipfs-utils');
 
 window.ethers = ethers;
 window.ipfsUtils = ipfsUtils;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { IPFS_ADD_STATUS_ENUM, ETH_TX_CONFIRM_ENUM } from '../../../../enums';
+import ipfsUtils from '../../../../ipfs-utils';
 const ethers = require('ethers');
-const ipfsUtils = require('../../../../ipfs-utils');
 
 export default class extends Component {
   state = {

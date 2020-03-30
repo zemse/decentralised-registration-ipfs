@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import TimelineElement from './TimelineElement/TimelineElement';
+import ipfsUtils from '../../../ipfs-utils';
 
 const ethers = require('ethers');
-const ipfsUtils = require('../../../ipfs-utils');
 
 export default class extends Component {
   state = {
