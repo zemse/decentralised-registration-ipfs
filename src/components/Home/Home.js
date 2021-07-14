@@ -31,7 +31,7 @@ export default class extends Component {
           !this.state.showTimeLine
           ? <>
               <UserDashboard />
-              <button onClick={() => this.setState({ showTimeLine: true })}>Show Public Timeline</button>
+              <button onClick={() => this.setState({ showTimeLine: true })}>Show Everyone's Profile Updates</button>
             </>
           : <>
               <button onClick={() => this.setState({ showTimeLine: false })}>Show My Dashboard</button>

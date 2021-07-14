@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
-import { network } from '../../env';
+import {getSigner} from '../../ethereum/utils';
 
 const ethers = require('ethers');
 
 export default class extends Component {
-  openEraSwapLife = () => {
-    window.open('https://eraswap.life/','','width=1001,height=650');
+   loadWallet = async () => {
+    const signer = await getSigner();
+    window.wallet = signer;
+    window.wallet.address = await window.wallet.getAddress();
+    window.dRegContract = window.dRegContract.connect(window.wallet);
   }
 
   render = () => (
     <>
-      <button onClick={this.openEraSwapLife}>Load Wallet Using Era Swap Life</button>
-      <button onClick={() => window.wallet = ethers.Wallet.createRandom().connect(ethers.getDefaultProvider(network))}>Random Wallet</button>
+      <button onClick={this.loadWallet}>Load Wallet</button>
     </>
   );
 }

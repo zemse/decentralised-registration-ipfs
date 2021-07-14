@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ipfsUtils from '../../../../ipfs-utils';
+import { defaultProvider } from '../../../../ethereum/utils'
+import { renderSecondsRemaining } from '../../../../utils';
 
 const ethers = require('ethers');
 
@@ -10,8 +12,11 @@ export default class extends Component {
     name: null,
     location: null,
     url: null,
-    bio: null
+    bio: null,
+    time: null,
   };
+
+  intervalId = null;
 
   componentDidMount = async() => {
     const userAddress = this.props.userAddress;
@@ -32,7 +37,19 @@ export default class extends Component {
       url: profileObj.url,
       bio: profileObj.bio,
     });
+
+    const block = await defaultProvider.getBlock(this.props.blockNumber);
+    console.log(block.timestamp, this.props.blockNumber);
+    this.intervalId = setInterval(() => {
+      this.setState({
+        time: renderSecondsRemaining(Math.floor(Date.now()/1000) - block.timestamp) + ' ago'
+      });
+    })
   };
+
+  componentWillUnmount = () => {
+    clearInterval(this.intervalId);
+  }
 
   render = () => {
     return (
@@ -42,7 +59,8 @@ export default class extends Component {
         <span className="el-key">Name:</span> {this.state.name}<br />
         <span className="el-key">Location:</span> {this.state.location}<br />
         <span className="el-key">Url:</span> <a href={this.state.url} target="_blank">{this.state.url}</a><br />
-        <span className="el-key">Bio:</span> {this.state.bio}
+        <span className="el-key">Bio:</span> {this.state.bio}<br />
+        <span className="el-key">Update Time:</span> {this.state.time === null ? 'Loading...' : this.state.time}
       </div>
     );
   }

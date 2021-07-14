@@ -32,7 +32,7 @@ export default class extends Component {
       ...window.dRegContract.filters.ProfileUpdated(),
       fromBlock: 0,
       toBlock: 'latest'
-    })).map(log => window.dRegContract.interface.parseLog(log)).reverse();
+    })).map(log => ({blockNumber: log.blockNumber, ...window.dRegContract.interface.parseLog(log)})).reverse();
     console.log({logs});
 
     this.setState({ logs, fetchingLogs: false });
@@ -49,10 +49,13 @@ export default class extends Component {
             {this.state.logs.map((log, i) => {
               const userAddress = log.values._userAddress;
               const ipfsSha256Hash = log.values._ipfsSha256Hash;
+              const blockNumber = log.blockNumber;
+              console.log(log);
               return <TimelineElement
-                key={i}
+                key={ipfsSha256Hash}
                 userAddress={userAddress}
                 ipfsSha256Hash={ipfsSha256Hash}
+                blockNumber={log.blockNumber}
                 h={i}
                 />
             })}
